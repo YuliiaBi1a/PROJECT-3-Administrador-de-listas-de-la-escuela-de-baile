@@ -1,0 +1,45 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.iconHolder,
+.homeIcon,
+.helpIcon {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+
+}
+
+#logo {
+    width: 120px;
+    height: auto;
+    margin: 5px;
+transition: transform 0.5s ease-in-out;
+}
+#logo:hover {
+    transform: rotate(360deg) scale(1.1);
+    
+}
+.icon {
+    width: 30px;
+    height: auto;
+    margin: 2px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s, font-size 0.3s;
+}
+
+.link:hover {
+    color: #fa0780;
+    font-size:24px;
+}

@@ -1,0 +1,22 @@
+<svg width="379" height="379" viewBox="0 0 379 379" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_45_379" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="379" height="379">
+<path d="M0 0H378.547V378.547H0V0Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_45_379)">
+<mask id="mask1_45_379" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0" width="379" height="379">
+<path d="M189.276 0C84.7396 0 0 84.7396 0 189.271C0 293.802 84.7396 378.547 189.276 378.547C293.807 378.547 378.547 293.802 378.547 189.271C378.547 84.7396 293.807 0 189.276 0Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_45_379)">
+<path d="M0 0H378.547V378.547H0V0Z" fill="#F8DBDC"/>
+</g>
+</g>
+<mask id="mask2_45_379" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="116" y="77" width="159" height="100">
+<path d="M116 77H274.031V177H116V77Z" fill="white"/>
+</mask>
+<g mask="url(#mask2_45_379)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M119.63 78.1458C185.469 96.2396 127.901 162.193 195.365 163.688C231.807 164.49 240.984 158.208 273.641 175.786C234.391 156.578 223.588 169.208 182.849 167.052C134.026 164.464 162.021 96.125 116.505 93.375L119.63 78.1458Z" fill="black"/>
+</g>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M161.406 168.089C133.052 229.432 188.162 270.761 240.365 285.375L270.875 291.88C231.511 285.417 232.646 286.365 211.078 278.339C157.209 258.297 111.094 203.432 148.323 152.719C149.87 155.807 151.714 158.734 153.964 161.417C156.219 164.089 158.703 166.287 161.406 168.089Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M167.422 175.786C202.333 198.786 175.87 294.604 233.812 326.771L248.766 333.333C141.229 299.146 205.51 206.88 167.422 175.786Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M183.135 121.604C176.875 121.5 170.64 128.156 169.208 136.448C167.776 144.745 171.698 151.552 177.953 151.656C184.208 151.75 190.442 145.104 191.875 136.807C193.307 128.51 189.39 121.708 183.135 121.604Z" fill="black"/>
+</svg>
