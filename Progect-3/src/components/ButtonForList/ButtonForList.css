@@ -1,0 +1,24 @@
+#saveListButton, #selectButtonList {
+    background-color: #D4E2D4;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 165px;
+    height: 49px;
+}
+
+#loardListsText {
+   text-align: center;
+}
+#selectButtonList optgroup {
+    text-align: left;
+}
+#loadlistbutton {
+    margin-left: 75px;
+}
+.listButton {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: auto;
+}

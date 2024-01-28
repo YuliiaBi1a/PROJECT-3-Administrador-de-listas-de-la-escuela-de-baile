@@ -1,0 +1,60 @@
+/* .formulary {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    font-weight: 400;
+    font-size: 12px;
+    margin: 50px;
+    background-color: aqua;
+} */
+
+ .formulary{
+background-color: #F8DBDC;
+ display: flex;
+ flex-direction: column;
+ border-radius: 10px;
+ width: 300px;
+ padding: 7px;
+} 
+.labelImputHolder {
+    /* background-color: #5933c0; */
+    display: flex;
+    flex-direction: column;
+    margin: 2px;
+}
+
+.double-column {
+    display: flex;
+    justify-content: space-between;
+      
+}
+
+#first-lastname,
+#second-lastname {
+    max-width: 130px
+}
+
+.input {
+    /* width: 245px;*/
+    height: 35px;
+    border-radius: 10px;
+    border: 0.5px solid #000;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.send-button {
+    background-color: #D4E2D4;
+    border-radius: 20px;
+    border-color: #000000;
+    border: 1px solid;
+    font-size: 16px;
+    width: 165px;
+    height: 49px;
+}
+
+#send-button-container {
+    display: flex;
+    justify-content: center;
+    padding-top: 30px;
+}
