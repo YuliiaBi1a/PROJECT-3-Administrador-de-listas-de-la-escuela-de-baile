@@ -1,19 +1,9 @@
-/* .formulary {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 10px;
-    font-weight: 400;
-    font-size: 12px;
-    margin: 50px;
-    background-color: aqua;
-} */
-
- .formulary{
+.formulary{
 background-color: #F8DBDC;
  display: flex;
  flex-direction: column;
  border-radius: 10px;
- width: 300px;
+ width: auto;
  padding: 7px;
 } 
 .labelImputHolder {
@@ -57,4 +47,41 @@ background-color: #F8DBDC;
     display: flex;
     justify-content: center;
     padding-top: 30px;
+}
+
+.formTableHolder{
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    /* display: flex;
+    flex-direction: row;
+    justify-content: space-between;  */
+}
+
+/*----------table--------------*/
+td,
+th {
+    text-align: center;
+    padding: 15px;
+    border: none;
+    color: #393838;
+}
+
+tr:nth-child(even) {
+    background-color: #D4E2D4;
+}
+
+tr:nth-child(odd) {
+    background-color: #FAF3F0;
+}
+
+#table-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: xx-large;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
 }
