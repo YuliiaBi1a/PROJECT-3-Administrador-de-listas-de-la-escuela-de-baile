@@ -82,21 +82,19 @@ function List() {
 
     return (
         <div className='formTableHolder'>
+            
             <form className="formulary">
 
-                <div >
-                    <label className='labelImputHolder'>Título de la lista:
-                        <input className="input" id="list-title" type="text"
-                            name="eventName" value={eventName} onChange={handleEventNameChange} />
-                    </label>
-                </div>
+                <label className='labelImputHolder'>Título de la lista:
+                    <input className="input" id="list-title" type="text"
+                        name="eventName" value={eventName} onChange={handleEventNameChange} />
+                </label>
 
-                <div>
-                    <label className='labelImputHolder'>Nombre:
-                        <input className="input" id="first-name" type="text"
-                            name="userName" value={user.userName} onChange={handleNameChange} />
-                    </label>
-                </div>
+                <label className='labelImputHolder'>Nombre:
+                    <input className="input" id="first-name" type="text"
+                        name="userName" value={user.userName} onChange={handleNameChange} />
+                </label>
+
 
                 < div className="double-column">
 
@@ -109,106 +107,102 @@ function List() {
                         <input className="input" id="second-lastname" type="text"
                             name="userSecondSurname" value={user.userSecondSurname} onChange={handleNameChange} />
                     </label>
-
                 </div>
 
-                <div>
-                    <label className='labelImputHolder'>Rol:
-                        <select className="input" id="rol" defaultValue={""}
-                            name="userRol" value={user.userRol} onChange={handleNameChange}>
-                            <option disabled hidden> </option>
-                            <option value={"Estudiante"}>Estudiante</option>
-                            <option value={"Docente"}>Docente</option>
-                            <option value={"PAS"}>PAS</option>
-                        </select>
-                    </label>
-                </div>
 
-                <div>
-                    <label className='labelImputHolder'>Curso:
-                        <select className="input" id="level" defaultValue={""}
-                            name="userCourse" value={user.userCourse} onChange={handleNameChange}>
-                            <option disabled hidden> </option>
-                            <option value={"Básico"}>Básico</option>
-                            <option value={"Intermedio"}>Intermedio</option>
-                            <option value={"Avanzado"}>Avanzado</option>
-                            <option value="-">-</option>
-                        </select>
-                    </label>
-                </div>
+                <label className='labelImputHolder'>Rol:
+                    <select className="input" id="rol" defaultValue={""}
+                        name="userRol" value={user.userRol} onChange={handleNameChange}>
+                        <option disabled hidden> </option>
+                        <option value={"Estudiante"}>Estudiante</option>
+                        <option value={"Docente"}>Docente</option>
+                        <option value={"PAS"}>PAS</option>
+                    </select>
+                </label>
 
-                <div>
-                    <label className='labelImputHolder'>Clase:
-                        <select className="input" id="danceClass" defaultValue={""}
-                            name="userClass" value={user.userClass} onChange={handleNameChange}>
-                            <option disabled hidden> </option>
-                            <option value={"Flamenco"}>Flamenco</option>
-                            <option value={"Hip Hop"}>Hip Hop</option>
-                            <option value={"Ballet"}>Ballet</option>
-                            <option value={"-"}>-</option>
-                        </select>
-                    </label>
-                </div>
+                <label className='labelImputHolder'>Curso:
+                    <select className="input" id="level" defaultValue={""}
+                        name="userCourse" value={user.userCourse} onChange={handleNameChange}>
+                        <option disabled hidden> </option>
+                        <option value={"Básico"}>Básico</option>
+                        <option value={"Intermedio"}>Intermedio</option>
+                        <option value={"Avanzado"}>Avanzado</option>
+                        <option value="-">-</option>
+                    </select>
+                </label>
 
-                <div>
-                    <label className='labelImputHolder'>Email:
-                        <input type="email" className="input" id="email" required
-                            name="userEmail" value={user.userEmail} onChange={handleNameChange} />
-                    </label>
-                </div>
+                <label className='labelImputHolder'>Clase:
+                    <select className="input" id="danceClass" defaultValue={""}
+                        name="userClass" value={user.userClass} onChange={handleNameChange}>
+                        <option disabled hidden> </option>
+                        <option value={"Flamenco"}>Flamenco</option>
+                        <option value={"Hip Hop"}>Hip Hop</option>
+                        <option value={"Ballet"}>Ballet</option>
+                        <option value={"-"}>-</option>
+                    </select>
+                </label>
+
+
+
+                <label className='labelImputHolder'>Email:
+                    <input type="email" className="input" id="email" required
+                        name="userEmail" value={user.userEmail} onChange={handleNameChange} />
+                </label>
+
 
                 <div id="send-button-container">
-                    <button type="button" className="send-button" onClick={sendData}>Enviar</button>
+                    <button type="button" className="btn send-button" onClick={sendData}>Enviar</button>
                 </div>
 
             </form>
 
-            <section className="tableSection">
 
-                <div className="list">
 
-                    <h2 id="table-title">{eventName !== '' ? `Participantes para ${eventName}` : "Nuevo nombre del evento"}</h2>
 
-                    <table id="myTable">
+            <div className="list">
 
-                        <thead>
-                            <tr>
-                                <th>№</th>
-                                <th>Nombre</th>
-                                <th>Primer Apellido</th>
-                                <th>Segundo Apellido</th>
-                                <th>Rol</th>
-                                <th>Curso</th>
-                                <th>Clase</th>
-                                <th>Email</th>
-                                <th></th>
+                <h2 id="table-title">{eventName !== '' ? `Participantes para ${eventName}` : "Nuevo nombre del evento"}</h2>
+
+                <table id="myTable">
+
+                    <thead>
+                        <tr>
+                            <th>№</th>
+                            <th>Nombre</th>
+                            <th>Primer Apellido</th>
+                            <th>Segundo Apellido</th>
+                            <th>Rol</th>
+                            <th>Curso</th>
+                            <th>Clase</th>
+                            <th>Email</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tableBody">
+                        {userList.map((user, index) => (
+                            <tr key={index}>
+                                <td>{index + 1}</td>
+                                <td>{user.userName}</td>
+                                <td>{user.userSurname}</td>
+                                <td>{user.userSecondSurname}</td>
+                                <td>{user.userRol}</td>
+                                <td>{user.userCourse}</td>
+                                <td>{user.userClass}</td>
+                                <td>{user.userEmail}</td>
+                                <td>
+                                    <button className='edDelBtn' id='editBtn' onClick={() => editUser(user)}></button>
+                                    <button className='edDelBtn' id='deleteBtn' onClick={() => deleteUser(user.id)}></button>
+                                </td>
                             </tr>
-                        </thead>
+                        ))}
+                    </tbody>
 
-                        <tbody id="tableBody">
-                            {userList.map((user, index) => (
-                                <tr key={index}>
-                                    <td>{index + 1}</td>
-                                    <td>{user.userName}</td>
-                                    <td>{user.userSurname}</td>
-                                    <td>{user.userSecondSurname}</td>
-                                    <td>{user.userRol}</td>
-                                    <td>{user.userCourse}</td>
-                                    <td>{user.userClass}</td>
-                                    <td>{user.userEmail}</td>
-                                    <td>
-                                        <button className='edDelBtn' id='editBtn' onClick={() => editUser(user)}></button>
-                                        <button className='edDelBtn' id='deleteBtn' onClick={() => deleteUser(user.id)}></button>
-                                    </td>
-                                </tr>
-                            ))}
-                        </tbody>
+                </table>
 
-                    </table>
+            </div>
 
-                </div>
 
-            </section>
 
 
         </div>

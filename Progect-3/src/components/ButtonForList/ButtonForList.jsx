@@ -4,16 +4,16 @@ function ButtonForList() {
     return (
         <section className="listButton">
             <section>
-                <button type="button" id="saveListButton">Guardar</button>
+                <button type="button" className="btn saveListButton" id="saveListButton">Guardar</button>
             </section>
 
             <section>
 
                 <form action="#" id="loadlistbutton">
 
-                    <select id="selectButtonList" name="listas">
+                    <select className='btn selectButtonList' id="selectButtonList" name="listas">
 
-                        <option selected disabled id='loardListsText'>Cargar Listas</option>
+                        <option selected disabled  id='loardListsText'>Cargar Listas</option>
 
                         <optgroup label="Rol">
                             <option value="estudiante">Estudiante</option>
