@@ -8,12 +8,18 @@ function List() {
         {
             userName: '',
             userSurname: '',
-
+            userSecondSurname: '',
+            userRol: '',
+            userCourse: '',
+            userClass: '',
+            userEmail: '',
         }
     );
 
+
     const [userList, setUserList] = useState([]);
     const [eventName, setEventName] = useState('');
+    const [editingUser, setEditingUser] = useState(null);
 
     async function getData() {
 
@@ -32,17 +38,47 @@ function List() {
     }
 
     async function sendData() {
+        if (editingUser) {
 
-        let newUsers = await UserService.submitUser(user);
-        setUserList((prevUsers) => [...prevUsers, newUsers]);
+            await UserService.editUser(editingUser.id, user);
+            setEditingUser(null);
+        } else {
 
+            let newUsers = await UserService.submitUser({ ...user });
+            setUserList((prevUsers) => [...prevUsers, newUsers]);
 
-        // Очистіть поля введення після додавання користувача
-        setUser({ userName: '', userSurname: '' });
+        }
+        setUser({
+            userName: '',
+            userSurname: '',
+            userSecondSurname: '',
+            userRol: '',
+            userCourse: '',
+            userClass: '',
+            userEmail: '',
+        });
     }
 
 
+    // Додаємо функцію для встановлення обраного користувача для редагування
+    function editUser(selectedUser) {
+        setUser({
+            userName: selectedUser.userName,
+            userSurname: selectedUser.userSurname,
+            userSecondSurname: selectedUser.userSecondSurname,
+            userRol: selectedUser.userRol,
+            userCourse: selectedUser.userCourse,
+            userClass: selectedUser.userClass,
+            userEmail: selectedUser.userEmail,
+        });
+        setEditingUser(selectedUser);
+    }
 
+    // Додаємо функцію для видалення користувача
+    async function deleteUser(id) {
+        await UserService.deleteUser(id);
+        getData();
+    }
 
     return (
         <div className='formTableHolder'>
@@ -65,18 +101,21 @@ function List() {
                 < div className="double-column">
 
                     <label className='labelImputHolder'>Primer apellido:
-                        <input className="input" id="first-lastname" type="text" name="userSurname" value={user.userSurname} onChange={handleNameChange} />
+                        <input className="input" id="first-lastname" type="text"
+                            name="userSurname" value={user.userSurname} onChange={handleNameChange} />
                     </label>
 
                     <label className='labelImputHolder'>Segundo apellido:
-                        <input className="input" id="second-lastname" />
+                        <input className="input" id="second-lastname" type="text"
+                            name="userSecondSurname" value={user.userSecondSurname} onChange={handleNameChange} />
                     </label>
 
                 </div>
 
                 <div>
                     <label className='labelImputHolder'>Rol:
-                        <select className="input" id="rol" defaultValue={""}>
+                        <select className="input" id="rol" defaultValue={""}
+                            name="userRol" value={user.userRol} onChange={handleNameChange}>
                             <option disabled hidden> </option>
                             <option value={"Estudiante"}>Estudiante</option>
                             <option value={"Docente"}>Docente</option>
@@ -87,7 +126,8 @@ function List() {
 
                 <div>
                     <label className='labelImputHolder'>Curso:
-                        <select className="input" id="level" defaultValue={""}>
+                        <select className="input" id="level" defaultValue={""}
+                            name="userCourse" value={user.userCourse} onChange={handleNameChange}>
                             <option disabled hidden> </option>
                             <option value={"Básico"}>Básico</option>
                             <option value={"Intermedio"}>Intermedio</option>
@@ -99,7 +139,8 @@ function List() {
 
                 <div>
                     <label className='labelImputHolder'>Clase:
-                        <select className="input" id="danceClass" defaultValue={""}>
+                        <select className="input" id="danceClass" defaultValue={""}
+                            name="userClass" value={user.userClass} onChange={handleNameChange}>
                             <option disabled hidden> </option>
                             <option value={"Flamenco"}>Flamenco</option>
                             <option value={"Hip Hop"}>Hip Hop</option>
@@ -111,7 +152,8 @@ function List() {
 
                 <div>
                     <label className='labelImputHolder'>Email:
-                        <input type="email" className="input" id="email" required />
+                        <input type="email" className="input" id="email" required
+                            name="userEmail" value={user.userEmail} onChange={handleNameChange} />
                     </label>
                 </div>
 
@@ -139,6 +181,7 @@ function List() {
                                 <th>Curso</th>
                                 <th>Clase</th>
                                 <th>Email</th>
+                                <th></th>
                             </tr>
                         </thead>
 
@@ -148,6 +191,15 @@ function List() {
                                     <td>{index + 1}</td>
                                     <td>{user.userName}</td>
                                     <td>{user.userSurname}</td>
+                                    <td>{user.userSecondSurname}</td>
+                                    <td>{user.userRol}</td>
+                                    <td>{user.userCourse}</td>
+                                    <td>{user.userClass}</td>
+                                    <td>{user.userEmail}</td>
+                                    <td>
+                                        <button className='edDelBtn' id='editBtn' onClick={() => editUser(user)}></button>
+                                        <button className='edDelBtn' id='deleteBtn' onClick={() => deleteUser(user.id)}></button>
+                                    </td>
                                 </tr>
                             ))}
                         </tbody>

@@ -1,14 +1,24 @@
 {
   "users": [
     {
-      "id": "9c55",
-      "userName": "Gata",
-      "userSurname": "Bila"
+      "userName": "Lorena",
+      "userSurname": "Rodriguez",
+      "userSecondSurname": "Lopez",
+      "userRol": "Docente",
+      "userCourse": "Avanzado",
+      "userClass": "Ballet",
+      "userEmail": "lorena12@gmail.com",
+      "id": "9945"
     },
     {
-      "id": "3c33",
+      "id": "8a84",
       "userName": "Yuliia",
-      "userSurname": "Bila"
+      "userSurname": "Bila",
+      "userSecondSurname": "MuyBila",
+      "userRol": "Docente",
+      "userCourse": "Básico",
+      "userClass": "Flamenco",
+      "userEmail": "yulia@gmail.com"
     }
   ]
 }
