@@ -36,4 +36,4 @@ Clona el repositorio desde (https://github.com/Clara-RuizSantacruz/Proyecto-2.gi
 
 ---
 
-¡Gracias por revisar nuestro proyecto! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto con cualquiera de las desarrolladoras.
+¡Gracias por revisar nuestro proyecto! Si tienes alguna pregunta o sugerencia, no dudes en ponerte en contacto conmigo.
