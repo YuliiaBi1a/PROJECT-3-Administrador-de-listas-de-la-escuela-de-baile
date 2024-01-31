@@ -8,13 +8,13 @@ Prerrequisito: La aplicación debe ser desarrollada usando React con manejo de e
 
 ## Funcionalidades
 
-**Administrador de Listas:**
-**Formulario:** Permite rellenar los datos de cada persona, generando una lista o tabla, guardar los datos en la Base de datos.
-**Lista:** Aparecerán los datos que hemos rellenado en el formulario.
-**Editar y borrar datos:** Los datos de la tabla pueden editarse y borrarse según sea necesario.
-**Validación del formulario:** si el usuario no rellena todos los campos obligatorios del formulario, los datos no se enviarán y el usuario recibirá una notificación vía alerta sobre la necesidad de rellenar los campos obligatorios. 
-**Guardar Lista:** Aunque actualmente no está funcional, el botón de "Guardar Lista" muestra un mensaje de alerta al pulsarse.
-**Seleccionar Lista Guardada:** Permite cargar listas anteriormente guardadas, aunque esta función no está operativa en la versión actual.
+- **Administrador de Listas:**
+- **Formulario:** Permite rellenar los datos de cada persona, generando una lista o tabla, guardar los datos en la Base de datos.
+- **Lista:** Aparecerán los datos que hemos rellenado en el formulario.
+- **Editar y borrar datos:** Los datos de la tabla pueden editarse y borrarse según sea necesario.
+- **Validación del formulario:** si el usuario no rellena todos los campos obligatorios del formulario, los datos no se enviarán y el usuario recibirá una notificación vía alerta sobre la necesidad de rellenar los campos obligatorios. 
+- **Guardar Lista:** Aunque actualmente no está funcional, el botón de "Guardar Lista" muestra un mensaje de alerta al pulsarse.
+- **Seleccionar Lista Guardada:** Permite cargar listas anteriormente guardadas, aunque esta función no está operativa en la versión actual.
 
 ## Tecnologías Utilizadas
 
