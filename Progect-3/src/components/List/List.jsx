@@ -39,6 +39,18 @@ function List() {
     }
 
     async function sendData() {
+
+        if (!user.userName ||
+            !user.userSurname ||
+            !user.userSecondSurname ||
+            !user.userRol ||
+            !user.userCourse ||
+            !user.userClass ||
+            !user.userEmail) {
+            alert('Rellene todos los campos obligatorios');
+            return; }
+
+
         if (editingUser) {
 
             await UserService.editUser(editingUser.id, user);
@@ -81,11 +93,11 @@ function List() {
         getData();
     }
 
-    
+
 
     return (
         <div className='formTableHolder'>
-            
+
             <form className="formulary">
 
                 <label className='labelImputHolder'>Título de la lista:
@@ -95,7 +107,7 @@ function List() {
 
                 <label className='labelImputHolder'>Nombre:
                     <input className="input" id="first-name" type="text"
-                        name="userName" value={user.userName} onChange={handleNameChange} />
+                        name="userName" value={user.userName} onChange={handleNameChange} required />
                 </label>
 
 
@@ -103,19 +115,19 @@ function List() {
 
                     <label className='labelImputHolder'>Primer apellido:
                         <input className="input" id="first-lastname" type="text"
-                            name="userSurname" value={user.userSurname} onChange={handleNameChange} />
+                            name="userSurname" value={user.userSurname} onChange={handleNameChange} required />
                     </label>
 
                     <label className='labelImputHolder'>Segundo apellido:
                         <input className="input" id="second-lastname" type="text"
-                            name="userSecondSurname" value={user.userSecondSurname} onChange={handleNameChange} />
+                            name="userSecondSurname" value={user.userSecondSurname} onChange={handleNameChange} required />
                     </label>
                 </div>
 
 
                 <label className='labelImputHolder'>Rol:
-                    <select className="input" id="rol" 
-                        name="userRol" value={user.userRol} onChange={handleNameChange}>
+                    <select className="input" id="rol"
+                        name="userRol" value={user.userRol} onChange={handleNameChange} required>
                         <option disabled hidden> </option>
                         <option value={"Estudiante"}>Estudiante</option>
                         <option value={"Docente"}>Docente</option>
@@ -124,8 +136,8 @@ function List() {
                 </label>
 
                 <label className='labelImputHolder'>Curso:
-                    <select className="input" id="level" 
-                        name="userCourse" value={user.userCourse} onChange={handleNameChange}>
+                    <select className="input" id="level"
+                        name="userCourse" value={user.userCourse} onChange={handleNameChange} required>
                         <option disabled hidden> </option>
                         <option value={"Básico"}>Básico</option>
                         <option value={"Intermedio"}>Intermedio</option>
@@ -136,7 +148,7 @@ function List() {
 
                 <label className='labelImputHolder'>Clase:
                     <select className="input" id="danceClass"
-                        name="userClass" value={user.userClass} onChange={handleNameChange}>
+                        name="userClass" value={user.userClass} onChange={handleNameChange} required>
                         <option disabled hidden> </option>
                         <option value={"Flamenco"}>Flamenco</option>
                         <option value={"Hip Hop"}>Hip Hop</option>
@@ -149,7 +161,7 @@ function List() {
 
                 <label className='labelImputHolder'>Email:
                     <input type="email" className="input" id="email"
-                        name="userEmail" value={user.userEmail} onChange={handleNameChange} />
+                        name="userEmail" value={user.userEmail} onChange={handleNameChange} placeholder='example@mail.com' required />
                 </label>
 
 

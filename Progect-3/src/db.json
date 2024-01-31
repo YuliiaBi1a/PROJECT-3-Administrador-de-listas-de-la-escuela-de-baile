@@ -1,5 +1,14 @@
 {
   "users": [
-
+    {
+      "id": "b715",
+      "userName": "Gata",
+      "userSurname": "Bila",
+      "userSecondSurname": "Blanca",
+      "userRol": "Estudiante",
+      "userCourse": "Básico",
+      "userClass": "Flamenco",
+      "userEmail": "yulia@gmail.com"
+    }
   ]
 }
