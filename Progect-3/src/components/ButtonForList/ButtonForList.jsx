@@ -1,10 +1,19 @@
 import './ButtonForList.css'
 
 function ButtonForList() {
+
+
+
+    function listAlert() {
+        alert("Lista guardada correctamente");
+    };
+
+
+
     return (
         <section className="listButton">
             <section>
-                <button type="button" className="btn saveListButton" id="saveListButton">Guardar</button>
+                <button type="button" className="btn saveListButton" id="saveListButton" onClick={listAlert}>Guardar</button>
             </section>
 
             <section>
@@ -13,7 +22,7 @@ function ButtonForList() {
 
                     <select className='btn selectButtonList' id="selectButtonList" name="listas">
 
-                        <option selected disabled  id='loardListsText'>Cargar Listas</option>
+                        <option defaultValue=""  id='loardListsText'>Cargar Listas</option>
 
                         <optgroup label="Rol">
                             <option value="estudiante">Estudiante</option>

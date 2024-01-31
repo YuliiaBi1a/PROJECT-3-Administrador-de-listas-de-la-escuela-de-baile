@@ -42,3 +42,26 @@
     transform: scale(1.1);
 
 }
+
+/*////////////////////Responsive/////////////////*/
+@media screen and (max-width: 932px) {
+    
+    .listButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
+        
+    
+
+}  
+}
+
+@media screen and (max-width: 532px){
+
+    .saveListButton, .selectButtonList {
+    
+    width: 120px;
+    height: 40px;
+} 
+}

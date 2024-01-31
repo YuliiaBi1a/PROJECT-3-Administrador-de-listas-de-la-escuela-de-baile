@@ -1,11 +1,12 @@
-.formulary{
-background-color: #F8DBDC;
- display: flex;
- flex-direction: column;
- border-radius: 10px;
- width: auto;
- padding: 7px;
+.formulary {
+    background-color: #F8DBDC;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    width: auto;
+    padding: 7px;
 }
+
 .labelImputHolder {
     /* background-color: #5933c0; */
     display: flex;
@@ -28,9 +29,10 @@ background-color: #F8DBDC;
     /* width: 245px;*/
     height: 35px;
     border-radius: 10px;
-    border: 0.5px solid #000;
+    border: 0.5px solid #6d5f5f;
     margin-top: 10px;
     background-color: white;
+
 }
 
 /* .send-button {
@@ -49,13 +51,10 @@ background-color: #F8DBDC;
     padding-top: 30px;
 }
 
-.formTableHolder{
+.formTableHolder {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 20px;
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between;  */
 }
 
 /*----------table--------------*/
@@ -65,6 +64,11 @@ th {
     padding: 15px;
     border: none;
     color: #393838;
+
+}
+
+th {
+    background-color: #F8DBDC;
 }
 
 tr:nth-child(even) {
@@ -84,26 +88,68 @@ tr:nth-child(odd) {
 table {
     border-collapse: collapse;
     width: 100%;
+
 }
 
 /*///////////////////////   BTN DELETE/EDIT   //////////////////////////*/
 
-.edDelBtn{
+.edDelBtn {
     width: 20px;
     height: 20px;
     background-size: 100%;
     background-position: center;
     border: none;
     border-radius: 3px;
+    margin: 2px;
     cursor: pointer;
     transition: transform 0.1s ease-in-out;
 }
-.edDelBtn:hover{
+
+.edDelBtn:hover {
     transform: scale(1.1);
 }
-#editBtn{
+
+#editBtn {
     background-image: url("/public/images/edit-icon.svg");
 }
-#deleteBtn{
+
+#deleteBtn {
     background-image: url("/public/images/delete-icon.svg");
+}
+
+/*////////////////////Responsive/////////////////*/
+@media screen and (max-width: 932px) {
+
+    .formTableHolder {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    .formulary {
+
+        margin: 0 20%;
+    }
+
+    #first-lastname,
+    #second-lastname {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+
+
+    .formulary {
+
+        margin: 5px;
+    }
+
+    #first-lastname,
+    #second-lastname {
+        max-width: 160px
+    }
 }

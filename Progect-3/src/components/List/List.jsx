@@ -2,6 +2,7 @@ import './List.css'
 import { useState } from "react";
 import { UserService } from '../../userService';
 
+
 function List() {
 
     const [user, setUser] = useState(
@@ -80,6 +81,8 @@ function List() {
         getData();
     }
 
+    
+
     return (
         <div className='formTableHolder'>
             
@@ -111,7 +114,7 @@ function List() {
 
 
                 <label className='labelImputHolder'>Rol:
-                    <select className="input" id="rol" defaultValue={""}
+                    <select className="input" id="rol" 
                         name="userRol" value={user.userRol} onChange={handleNameChange}>
                         <option disabled hidden> </option>
                         <option value={"Estudiante"}>Estudiante</option>
@@ -121,7 +124,7 @@ function List() {
                 </label>
 
                 <label className='labelImputHolder'>Curso:
-                    <select className="input" id="level" defaultValue={""}
+                    <select className="input" id="level" 
                         name="userCourse" value={user.userCourse} onChange={handleNameChange}>
                         <option disabled hidden> </option>
                         <option value={"Básico"}>Básico</option>
@@ -132,7 +135,7 @@ function List() {
                 </label>
 
                 <label className='labelImputHolder'>Clase:
-                    <select className="input" id="danceClass" defaultValue={""}
+                    <select className="input" id="danceClass"
                         name="userClass" value={user.userClass} onChange={handleNameChange}>
                         <option disabled hidden> </option>
                         <option value={"Flamenco"}>Flamenco</option>
@@ -145,7 +148,7 @@ function List() {
 
 
                 <label className='labelImputHolder'>Email:
-                    <input type="email" className="input" id="email" required
+                    <input type="email" className="input" id="email"
                         name="userEmail" value={user.userEmail} onChange={handleNameChange} />
                 </label>
 
@@ -207,6 +210,10 @@ function List() {
 
         </div>
     )
+
+
+
+
 }
 
 export default List

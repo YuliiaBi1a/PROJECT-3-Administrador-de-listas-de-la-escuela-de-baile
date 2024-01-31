@@ -1,24 +1,5 @@
 {
   "users": [
-    {
-      "userName": "Lorena",
-      "userSurname": "Rodriguez",
-      "userSecondSurname": "Lopez",
-      "userRol": "Docente",
-      "userCourse": "Avanzado",
-      "userClass": "Ballet",
-      "userEmail": "lorena12@gmail.com",
-      "id": "9945"
-    },
-    {
-      "id": "8a84",
-      "userName": "Yuliia",
-      "userSurname": "Bila",
-      "userSecondSurname": "MuyBila",
-      "userRol": "Docente",
-      "userCourse": "Básico",
-      "userClass": "Flamenco",
-      "userEmail": "yulia@gmail.com"
-    }
+
   ]
 }
