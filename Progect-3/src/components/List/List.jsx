@@ -105,7 +105,7 @@ function List() {
                         name="eventName" value={eventName} onChange={handleEventNameChange} />
                 </label>
 
-                <label className='labelImputHolder'>Nombre:
+                <label className='labelImputHolder'>*Nombre:
                     <input className="input" id="first-name" type="text"
                         name="userName" value={user.userName} onChange={handleNameChange} required />
                 </label>
@@ -113,19 +113,19 @@ function List() {
 
                 < div className="double-column">
 
-                    <label className='labelImputHolder'>Primer apellido:
+                    <label className='labelImputHolder'>*Primer apellido:
                         <input className="input" id="first-lastname" type="text"
                             name="userSurname" value={user.userSurname} onChange={handleNameChange} required />
                     </label>
 
-                    <label className='labelImputHolder'>Segundo apellido:
+                    <label className='labelImputHolder'>*Segundo apellido:
                         <input className="input" id="second-lastname" type="text"
                             name="userSecondSurname" value={user.userSecondSurname} onChange={handleNameChange} required />
                     </label>
                 </div>
 
 
-                <label className='labelImputHolder'>Rol:
+                <label className='labelImputHolder'>*Rol:
                     <select className="input" id="rol"
                         name="userRol" value={user.userRol} onChange={handleNameChange} required>
                         <option disabled hidden> </option>
@@ -135,7 +135,7 @@ function List() {
                     </select>
                 </label>
 
-                <label className='labelImputHolder'>Curso:
+                <label className='labelImputHolder'>*Curso:
                     <select className="input" id="level"
                         name="userCourse" value={user.userCourse} onChange={handleNameChange} required>
                         <option disabled hidden> </option>
@@ -146,7 +146,7 @@ function List() {
                     </select>
                 </label>
 
-                <label className='labelImputHolder'>Clase:
+                <label className='labelImputHolder'>*Clase:
                     <select className="input" id="danceClass"
                         name="userClass" value={user.userClass} onChange={handleNameChange} required>
                         <option disabled hidden> </option>
@@ -159,10 +159,11 @@ function List() {
 
 
 
-                <label className='labelImputHolder'>Email:
+                <label className='labelImputHolder'>*Email:
                     <input type="email" className="input" id="email"
                         name="userEmail" value={user.userEmail} onChange={handleNameChange} placeholder='example@mail.com' required />
                 </label>
+                <p>El símbolo (*) indica los campos que deben rellenarse obligatoriamente</p>
 
 
                 <div id="send-button-container">

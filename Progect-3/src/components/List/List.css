@@ -48,7 +48,7 @@
 #send-button-container {
     display: flex;
     justify-content: center;
-    padding-top: 30px;
+    /* padding-top: 30px; */
 }
 
 .formTableHolder {
@@ -89,6 +89,12 @@ table {
     border-collapse: collapse;
     width: 100%;
 
+}
+
+p{
+    color: #8d8585;
+    font-style: italic;
+    text-align: justify;
 }
 
 /*///////////////////////   BTN DELETE/EDIT   //////////////////////////*/
