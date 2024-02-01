@@ -8,7 +8,6 @@
 }
 
 .labelImputHolder {
-    /* background-color: #5933c0; */
     display: flex;
     flex-direction: column;
     margin: 2px;
@@ -17,7 +16,6 @@
 .double-column {
     display: flex;
     justify-content: space-between;
-
 }
 
 #first-lastname,
@@ -26,30 +24,17 @@
 }
 
 .input {
-    /* width: 245px;*/
     height: 35px;
     border-radius: 10px;
     border: 0.5px solid #6d5f5f;
     margin-top: 10px;
     background-color: white;
     font-size: 18px;
-
 }
-
-/* .send-button {
-    background-color: #D4E2D4;
-    border-radius: 20px;
-    border-color: #000000;
-    border: 1px solid;
-    font-size: 16px;
-    width: 165px;
-    height: 49px;
-} */
 
 #send-button-container {
     display: flex;
     justify-content: center;
-    /* padding-top: 30px; */
 }
 
 .formTableHolder {
@@ -58,14 +43,12 @@
     gap: 20px;
 }
 
-/*----------table--------------*/
 td,
 th {
     text-align: center;
     padding: 15px;
     border: none;
     color: #393838;
-
 }
 
 th {
@@ -89,7 +72,6 @@ tr:nth-child(odd) {
 table {
     border-collapse: collapse;
     width: 100%;
-
 }
 
 p{
@@ -97,8 +79,6 @@ p{
     font-style: italic;
     text-align: justify;
 }
-
-/*///////////////////////   BTN DELETE/EDIT   //////////////////////////*/
 
 .edDelBtn {
     width: 20px;
@@ -124,20 +104,17 @@ p{
     background-image: url("/public/images/delete-icon.svg");
 }
 
-/*////////////////////Responsive/////////////////*/
+
 
 @media screen and (max-width: 932px) {
 
     .formTableHolder {
-
         display: flex;
         flex-direction: column;
         justify-content: center;
-
     }
 
     .formulary {
-
         margin: 0 20%;
     }
 
@@ -149,10 +126,7 @@ p{
 
 @media screen and (max-width: 650px) {
 
-
-
     .formulary {
-
         margin: 5px;
     }
 
@@ -161,22 +135,3 @@ p{
         max-width: 160px
     }
 }
-
-/*/////////////////////   ERROR-MASSEGE   ////////////////////////////*/
-
-/* .formTableHolder {
-    position: relative;
-  }
-  
-  .error-message {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f44336;
-    color: white;
-    padding: 10px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  } */

@@ -18,7 +18,7 @@ export const UserService = {
             return allUsers;
         } catch (error) {
             console.error("Error fetching all users:", error);
-            throw error; // Re-throw the error for the calling code to handle
+            throw error; 
         }
     },
 

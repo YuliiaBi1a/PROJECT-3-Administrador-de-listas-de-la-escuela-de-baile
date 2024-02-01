@@ -17,22 +17,18 @@ function List() {
         }
     );
 
-
     const [userList, setUserList] = useState([]);
     const [eventName, setEventName] = useState('');
     const [editingUser, setEditingUser] = useState(null);
-    //const [errorMessage, setErrorMessage] = useState(null);
 
     async function getData() {
 
         try {
             let users = await UserService.getAllUsers();
             setUserList(users);
-           // setErrorMessage(null); // Restablecer el error si ya existía anteriormente
         } catch (error) {
             console.error("Error fetching users:", error);
             alert ("Error al recibir usuarios. Por favor, inténtelo de nuevo.");
-            //setErrorMessage("Error al recibir usuarios. Por favor, inténtelo de nuevo.");
             return;
         }
     }
@@ -86,14 +82,11 @@ function List() {
         } catch (error) {
             console.error("Error submitting/editing user:", error);
            alert("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
-            //setErrorMessage("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
             return;
         }
 
     }
 
-
-    // Додаємо функцію для встановлення обраного користувача для редагування
     function editUser(selectedUser) {
         setUser({
             userName: selectedUser.userName,
@@ -107,20 +100,17 @@ function List() {
         setEditingUser(selectedUser);
     }
 
-    // Додаємо функцію для видалення користувача
+    
     async function deleteUser(id) {
         
         try {
             await UserService.deleteUser(id);
         getData();
-           // setErrorMessage(null); // Restablecer el error si ya existía anteriormente
+
         } catch (error) {
             console.error("Error fetching users:", error);
             alert ("Error al eliminar usuarios. Por favor, inténtelo de nuevo.");
-            //setErrorMessage("Error al eliminar usuarios. Por favor, inténtelo de nuevo.");
         }
-        //await UserService.deleteUser(id);
-       // getData();
     }
 
 
@@ -204,7 +194,6 @@ function List() {
 
 
 
-
             <div className="list">
 
                 <h2 id="table-title">{eventName !== '' ? `Participantes para ${eventName}` : "Nuevo nombre del evento"}</h2>
@@ -247,13 +236,6 @@ function List() {
                 </table>
 
             </div>
-
-            {/* Відображення повідомлення про помилку, якщо воно є */}
-            {/* {errorMessage && (
-                <div className="error-message">
-                    {errorMessage}
-                </div>
-            )} */}
 
         </div>
     )

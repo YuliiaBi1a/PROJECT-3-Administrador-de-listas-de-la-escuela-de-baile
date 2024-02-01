@@ -2,13 +2,9 @@ import './ButtonForList.css'
 
 function ButtonForList() {
 
-
-
     function listAlert() {
         alert("Lista guardada correctamente");
     };
-
-
 
     return (
         <section className="listButton">

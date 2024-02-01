@@ -1,8 +1,7 @@
 nav {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 20px; 
-
+    margin-bottom: 20px;
 }
 
 .iconHolder,
@@ -11,24 +10,25 @@ nav {
     display: flex;
     align-items: center;
     margin: 5px;
-
 }
 
 #logo {
     width: 120px;
     height: auto;
     margin: 5px;
-transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
+
 #logo:hover {
     transform: rotate(360deg) scale(1.1);
-    
 }
+
 .icon {
     width: 30px;
     height: auto;
     margin: 2px;
 }
+
 a {
     text-decoration: none;
     color: inherit;
@@ -42,5 +42,5 @@ a {
 
 .link:hover {
     color: #fa0780;
-    font-size:24px;
+    font-size: 24px;
 }
