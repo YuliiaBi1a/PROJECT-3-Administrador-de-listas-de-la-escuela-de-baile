@@ -8,7 +8,7 @@ Requisito: La aplicación debe ser desarrollada usando React con manejo de estad
 
 ## Funcionalidades
 
-- **Administrador de Listas:**
+**Administrador de Listas:**
 - **Formulario:** Permite rellenar los datos de cada persona, generando una lista o tabla, guardar los datos en la Base de datos.
 - **Lista:** Aparecerán los datos que hemos rellenado en el formulario.
 - **Editar y borrar datos:** Los datos de la tabla pueden editarse y borrarse según sea necesario.
