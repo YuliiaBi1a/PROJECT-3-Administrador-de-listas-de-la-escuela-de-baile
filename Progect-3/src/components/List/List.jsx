@@ -77,8 +77,6 @@ function List() {
                 userEmail: '',
             });
 
-            setErrorMessage(null);
-
         } catch (error) {
             console.error("Error submitting/editing user:", error);
            alert("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");

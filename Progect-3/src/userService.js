@@ -34,6 +34,7 @@ export const UserService = {
     },
 
     async editUser(userId, updatedUserData) {
+        
         try {
             let response = await apiClient.put(`/users/${userId}`, updatedUserData);
             let editedUser = response.data;
@@ -45,6 +46,7 @@ export const UserService = {
     },
 
     async deleteUser(userId) {
+        
         try {
             await apiClient.delete(`/users/${userId}`);
         } catch (error) {
