@@ -1,0 +1,67 @@
+/* .saveListButton, .selectButtonList {
+    background-color: #D4E2D4;
+    border-radius: 10px;
+    border: 1px solid black;
+    font-size: 16px;
+    width: 165px;
+    height: 49px;
+} */
+
+#loardListsText {
+   text-align: center;
+}
+#selectButtonList optgroup {
+    text-align: left;
+}
+#loadlistbutton {
+    margin-left: 75px;
+}
+.listButton {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: auto;
+}
+
+.btn  {
+    background-color: #D4E2D4;
+    border-radius: 20px;
+    font-size: 16px;
+    width: 165px;
+    height: 49px;
+    margin: 20px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 0 10px #bb175bc2;
+    transition: background-color 0.2s, transform 0.2s ease-in-out;
+}
+
+.btn:hover {
+    background-color: #F8DBDC;
+    border: 1px solid #e981ad;
+    transform: scale(1.1);
+
+}
+
+/*////////////////////Responsive/////////////////*/
+@media screen and (max-width: 932px) {
+    
+    .listButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: auto;
+        
+    
+
+}  
+}
+
+@media screen and (max-width: 532px){
+
+    .saveListButton, .selectButtonList {
+    
+    width: 120px;
+    height: 40px;
+} 
+}
