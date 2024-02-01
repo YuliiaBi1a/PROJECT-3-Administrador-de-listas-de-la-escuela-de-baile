@@ -21,11 +21,20 @@ function List() {
     const [userList, setUserList] = useState([]);
     const [eventName, setEventName] = useState('');
     const [editingUser, setEditingUser] = useState(null);
+    //const [errorMessage, setErrorMessage] = useState(null);
 
     async function getData() {
 
-        let users = await UserService.getAllUsers();
-        setUserList(users);
+        try {
+            let users = await UserService.getAllUsers();
+            setUserList(users);
+           // setErrorMessage(null); // Restablecer el error si ya existía anteriormente
+        } catch (error) {
+            console.error("Error fetching users:", error);
+            alert ("Error al recibir usuarios. Por favor, inténtelo de nuevo.");
+            //setErrorMessage("Error al recibir usuarios. Por favor, inténtelo de nuevo.");
+            return;
+        }
     }
 
     getData();
@@ -48,28 +57,39 @@ function List() {
             !user.userClass ||
             !user.userEmail) {
             alert('Rellene todos los campos obligatorios');
-            return; }
-
-
-        if (editingUser) {
-
-            await UserService.editUser(editingUser.id, user);
-            setEditingUser(null);
-        } else {
-
-            let newUsers = await UserService.submitUser({ ...user });
-            setUserList((prevUsers) => [...prevUsers, newUsers]);
-
+            return;
         }
-        setUser({
-            userName: '',
-            userSurname: '',
-            userSecondSurname: '',
-            userRol: '',
-            userCourse: '',
-            userClass: '',
-            userEmail: '',
-        });
+        try {
+
+            if (editingUser) {
+
+                await UserService.editUser(editingUser.id, user);
+                setEditingUser(null);
+            } else {
+
+                let newUsers = await UserService.submitUser({ ...user });
+                setUserList((prevUsers) => [...prevUsers, newUsers]);
+
+            }
+            setUser({
+                userName: '',
+                userSurname: '',
+                userSecondSurname: '',
+                userRol: '',
+                userCourse: '',
+                userClass: '',
+                userEmail: '',
+            });
+
+            setErrorMessage(null);
+
+        } catch (error) {
+            console.error("Error submitting/editing user:", error);
+           alert("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
+            //setErrorMessage("Se ha producido un error al enviar/editar un usuario. Es posible que haya dejado campos en blanco o que los datos introducidos no coincidan con el formato esperado. Por favor, compruébalo e inténtalo de nuevo.");
+            return;
+        }
+
     }
 
 
@@ -89,8 +109,18 @@ function List() {
 
     // Додаємо функцію для видалення користувача
     async function deleteUser(id) {
-        await UserService.deleteUser(id);
+        
+        try {
+            await UserService.deleteUser(id);
         getData();
+           // setErrorMessage(null); // Restablecer el error si ya existía anteriormente
+        } catch (error) {
+            console.error("Error fetching users:", error);
+            alert ("Error al eliminar usuarios. Por favor, inténtelo de nuevo.");
+            //setErrorMessage("Error al eliminar usuarios. Por favor, inténtelo de nuevo.");
+        }
+        //await UserService.deleteUser(id);
+       // getData();
     }
 
 
@@ -218,8 +248,12 @@ function List() {
 
             </div>
 
-
-
+            {/* Відображення повідомлення про помилку, якщо воно є */}
+            {/* {errorMessage && (
+                <div className="error-message">
+                    {errorMessage}
+                </div>
+            )} */}
 
         </div>
     )

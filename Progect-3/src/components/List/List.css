@@ -32,6 +32,7 @@
     border: 0.5px solid #6d5f5f;
     margin-top: 10px;
     background-color: white;
+    font-size: 18px;
 
 }
 
@@ -124,6 +125,7 @@ p{
 }
 
 /*////////////////////Responsive/////////////////*/
+
 @media screen and (max-width: 932px) {
 
     .formTableHolder {
@@ -159,3 +161,22 @@ p{
         max-width: 160px
     }
 }
+
+/*/////////////////////   ERROR-MASSEGE   ////////////////////////////*/
+
+/* .formTableHolder {
+    position: relative;
+  }
+  
+  .error-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  } */
