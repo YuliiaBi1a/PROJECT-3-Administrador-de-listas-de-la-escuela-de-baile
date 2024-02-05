@@ -34,7 +34,7 @@ export const UserService = {
     },
 
     async editUser(userId, updatedUserData) {
-        
+       
         try {
             let response = await apiClient.put(`/users/${userId}`, updatedUserData);
             let editedUser = response.data;

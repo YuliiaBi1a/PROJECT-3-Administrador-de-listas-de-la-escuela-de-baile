@@ -1,14 +1,5 @@
 {
   "users": [
-    {
-      "id": "ca64",
-      "userName": "Gata",
-      "userSurname": "Bila",
-      "userSecondSurname": "vnc",
-      "userRol": "Estudiante",
-      "userCourse": "Básico",
-      "userClass": "Flamenco",
-      "userEmail": "x x"
-    }
+
   ]
 }
